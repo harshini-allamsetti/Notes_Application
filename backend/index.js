@@ -27,13 +27,6 @@ app.use(
   })
 );
 
-res.cookie("access_token", token, {
-  httpOnly: true,
-  secure: true, // For HTTPS
-  sameSite: "none", // Important for cross-site cookies
-  maxAge: 24 * 60 * 60 * 1000, // 1 day
-});
-
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
