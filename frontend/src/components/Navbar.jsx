@@ -35,7 +35,6 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
       const res = await axios.get("https://notes-app-server-1iwm.onrender.com/api/auth/signout", {
         withCredentials: true,
       })
-
       if (res.data.success === false) {
         dispatch(signoutFailure(res.data.message))
         toast.error(res.data.message)
